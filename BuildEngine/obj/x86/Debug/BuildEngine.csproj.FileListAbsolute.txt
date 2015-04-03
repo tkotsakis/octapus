@@ -1,0 +1,21 @@
+D:\Visual Studio 2010\Projects\Relational.Octapus\BuildEngine\bin\Debug\Relational.Octapus.BuildEngine.dll
+D:\Visual Studio 2010\Projects\Relational.Octapus\BuildEngine\bin\Debug\Relational.Octapus.BuildEngine.pdb
+D:\Visual Studio 2010\Projects\Relational.Octapus\BuildEngine\obj\x86\Debug\Relational.Octapus.BuildEngine.dll
+D:\Visual Studio 2010\Projects\Relational.Octapus\BuildEngine\obj\x86\Debug\Relational.Octapus.BuildEngine.pdb
+C:\projects\Relational.Octapus\BuildEngine\bin\Debug\NLog.config
+C:\projects\Relational.Octapus\BuildEngine\bin\Debug\NLog.xsd
+C:\projects\Relational.Octapus\BuildEngine\bin\Debug\Relational.Octapus.BuildEngine.dll
+C:\projects\Relational.Octapus\BuildEngine\bin\Debug\Relational.Octapus.BuildEngine.pdb
+C:\projects\Relational.Octapus\BuildEngine\bin\Debug\Relational.Octapus.Common.dll
+C:\projects\Relational.Octapus\BuildEngine\bin\Debug\Relational.Octapus.Persistence.dll
+C:\projects\Relational.Octapus\BuildEngine\bin\Debug\Workspace.dll
+C:\projects\Relational.Octapus\BuildEngine\bin\Debug\DiffPlex.dll
+C:\projects\Relational.Octapus\BuildEngine\bin\Debug\Sybase.AdoNet4.AseClient.dll
+C:\projects\Relational.Octapus\BuildEngine\bin\Debug\NLog.dll
+C:\projects\Relational.Octapus\BuildEngine\bin\Debug\Relational.Octapus.Common.pdb
+C:\projects\Relational.Octapus\BuildEngine\bin\Debug\Relational.Octapus.Persistence.pdb
+C:\projects\Relational.Octapus\BuildEngine\bin\Debug\Workspace.pdb
+C:\projects\Relational.Octapus\BuildEngine\bin\Debug\NLog.xml
+C:\projects\Relational.Octapus\BuildEngine\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\projects\Relational.Octapus\BuildEngine\obj\x86\Debug\Relational.Octapus.BuildEngine.dll
+C:\projects\Relational.Octapus\BuildEngine\obj\x86\Debug\Relational.Octapus.BuildEngine.pdb

@@ -1,0 +1,38 @@
+D:\Visual Studio 2010\Projects\Relational.Octapus\Console\bin\Debug\Relational.Octapus.Console.exe.config
+D:\Visual Studio 2010\Projects\Relational.Octapus\Console\bin\Debug\Relational.Octapus.Console.exe
+D:\Visual Studio 2010\Projects\Relational.Octapus\Console\bin\Debug\Relational.Octapus.Console.pdb
+D:\Visual Studio 2010\Projects\Relational.Octapus\Console\bin\Debug\Relational.Octapus.BuildEngine.dll
+D:\Visual Studio 2010\Projects\Relational.Octapus\Console\bin\Debug\Relational.Octapus.BuildEngine.pdb
+D:\Visual Studio 2010\Projects\Relational.Octapus\Console\obj\x86\Debug\Relational.Octapus.Console.exe
+D:\Visual Studio 2010\Projects\Relational.Octapus\Console\obj\x86\Debug\Relational.Octapus.Console.pdb
+D:\Visual Studio 2010\Projects\Relational.Octapus\Console\obj\x86\Debug\Console.csprojResolveAssemblyReference.cache
+C:\projects\Relational.Octapus\Console\bin\Debug\ApplicationParams.xml
+C:\projects\Relational.Octapus\Console\bin\Debug\VersionInfo.xml
+C:\projects\Relational.Octapus\Console\bin\Debug\WorkspaceProfile.config
+C:\projects\Relational.Octapus\Console\bin\Debug\NLog.config
+C:\projects\Relational.Octapus\Console\bin\Debug\NLog.xsd
+C:\projects\Relational.Octapus\Console\bin\Debug\Relational.Octapus.Console.exe.config
+C:\projects\Relational.Octapus\Console\bin\Debug\Relational.Octapus.Console.exe
+C:\projects\Relational.Octapus\Console\bin\Debug\Relational.Octapus.Console.pdb
+C:\projects\Relational.Octapus\Console\bin\Debug\Relational.Octapus.BuildEngine.dll
+C:\projects\Relational.Octapus\Console\bin\Debug\Relational.Octapus.Common.dll
+C:\projects\Relational.Octapus\Console\bin\Debug\Relational.Octapus.Persistence.dll
+C:\projects\Relational.Octapus\Console\bin\Debug\Relational.Octapus.Persistence.ExternalFiles.dll
+C:\projects\Relational.Octapus\Console\bin\Debug\Retrofit.dll
+C:\projects\Relational.Octapus\Console\bin\Debug\Workspace.dll
+C:\projects\Relational.Octapus\Console\bin\Debug\Workspace.SourceSafe.dll
+C:\projects\Relational.Octapus\Console\bin\Debug\DiffPlex.dll
+C:\projects\Relational.Octapus\Console\bin\Debug\Cassia.dll
+C:\projects\Relational.Octapus\Console\bin\Debug\Sybase.AdoNet4.AseClient.dll
+C:\projects\Relational.Octapus\Console\bin\Debug\NLog.dll
+C:\projects\Relational.Octapus\Console\bin\Debug\Relational.Octapus.BuildEngine.pdb
+C:\projects\Relational.Octapus\Console\bin\Debug\Relational.Octapus.Common.pdb
+C:\projects\Relational.Octapus\Console\bin\Debug\Relational.Octapus.Persistence.ExternalFiles.pdb
+C:\projects\Relational.Octapus\Console\bin\Debug\Relational.Octapus.Persistence.pdb
+C:\projects\Relational.Octapus\Console\bin\Debug\Retrofit.pdb
+C:\projects\Relational.Octapus\Console\bin\Debug\Workspace.SourceSafe.pdb
+C:\projects\Relational.Octapus\Console\bin\Debug\Workspace.pdb
+C:\projects\Relational.Octapus\Console\bin\Debug\NLog.xml
+C:\projects\Relational.Octapus\Console\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\projects\Relational.Octapus\Console\obj\x86\Debug\Relational.Octapus.Console.exe
+C:\projects\Relational.Octapus\Console\obj\x86\Debug\Relational.Octapus.Console.pdb

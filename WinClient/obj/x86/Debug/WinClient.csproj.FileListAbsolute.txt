@@ -1,0 +1,61 @@
+D:\Visual Studio 2010\Projects\Relational.Octapus\WinClient\bin\Debug\Relational.Octapus.WinClient.exe.config
+D:\Visual Studio 2010\Projects\Relational.Octapus\WinClient\bin\Debug\Relational.Octapus.WinClient.exe
+D:\Visual Studio 2010\Projects\Relational.Octapus\WinClient\bin\Debug\Relational.Octapus.WinClient.pdb
+D:\Visual Studio 2010\Projects\Relational.Octapus\WinClient\bin\Debug\Relational.Octapus.BuildEngine.dll
+D:\Visual Studio 2010\Projects\Relational.Octapus\WinClient\bin\Debug\Relational.Octapus.BuildEngine.pdb
+D:\Visual Studio 2010\Projects\Relational.Octapus\WinClient\obj\x86\Debug\WinClient.csprojResolveAssemblyReference.cache
+D:\Visual Studio 2010\Projects\Relational.Octapus\WinClient\obj\x86\Debug\MainWindow.baml
+D:\Visual Studio 2010\Projects\Relational.Octapus\WinClient\obj\x86\Debug\MainWindow.g.cs
+D:\Visual Studio 2010\Projects\Relational.Octapus\WinClient\obj\x86\Debug\App.g.cs
+D:\Visual Studio 2010\Projects\Relational.Octapus\WinClient\obj\x86\Debug\Relational.Octapus.WinClient_MarkupCompile.cache
+D:\Visual Studio 2010\Projects\Relational.Octapus\WinClient\obj\x86\Debug\Relational.Octapus.WinClient.g.resources
+D:\Visual Studio 2010\Projects\Relational.Octapus\WinClient\obj\x86\Debug\Relational.Octapus.WinClient.Properties.Resources.resources
+D:\Visual Studio 2010\Projects\Relational.Octapus\WinClient\obj\x86\Debug\WinClient.csproj.GenerateResource.Cache
+D:\Visual Studio 2010\Projects\Relational.Octapus\WinClient\obj\x86\Debug\Relational.Octapus.WinClient.exe
+D:\Visual Studio 2010\Projects\Relational.Octapus\WinClient\obj\x86\Debug\Relational.Octapus.WinClient.pdb
+D:\Visual Studio 2010\Projects\Relational.Octapus\WinClient\bin\Debug\NLog.config
+D:\Visual Studio 2010\Projects\Relational.Octapus\WinClient\bin\Debug\NLog.dll
+D:\Visual Studio 2010\Projects\Relational.Octapus\WinClient\bin\Debug\NLog.xml
+D:\Visual Studio 2010\Projects\Relational.Octapus\WinClient\obj\x86\Debug\Relational.Octapus.WinClient_Content.g.cs
+C:\projects\Relational.Octapus\WinClient\bin\Debug\ApplicationParams.xml
+C:\projects\Relational.Octapus\WinClient\bin\Debug\VersionInfo.xml
+C:\projects\Relational.Octapus\WinClient\bin\Debug\WorkspaceProfile.config
+C:\projects\Relational.Octapus\WinClient\bin\Debug\NLog.config
+C:\projects\Relational.Octapus\WinClient\bin\Debug\NLog.xsd
+C:\projects\Relational.Octapus\WinClient\bin\Debug\Relational.Octapus.WinClient.exe.config
+C:\projects\Relational.Octapus\WinClient\bin\Debug\Relational.Octapus.WinClient.exe
+C:\projects\Relational.Octapus\WinClient\bin\Debug\Relational.Octapus.WinClient.pdb
+C:\projects\Relational.Octapus\WinClient\bin\Debug\Relational.Octapus.BuildEngine.dll
+C:\projects\Relational.Octapus\WinClient\bin\Debug\Relational.Octapus.Common.dll
+C:\projects\Relational.Octapus\WinClient\bin\Debug\Relational.Octapus.Persistence.dll
+C:\projects\Relational.Octapus\WinClient\bin\Debug\Relational.Octapus.Persistence.ExternalFiles.dll
+C:\projects\Relational.Octapus\WinClient\bin\Debug\Workspace.dll
+C:\projects\Relational.Octapus\WinClient\bin\Debug\Workspace.SourceSafe.dll
+C:\projects\Relational.Octapus\WinClient\bin\Debug\DiffPlex.dll
+C:\projects\Relational.Octapus\WinClient\bin\Debug\Cassia.dll
+C:\projects\Relational.Octapus\WinClient\bin\Debug\Sybase.AdoNet4.AseClient.dll
+C:\projects\Relational.Octapus\WinClient\bin\Debug\NLog.dll
+C:\projects\Relational.Octapus\WinClient\bin\Debug\Relational.Octapus.BuildEngine.pdb
+C:\projects\Relational.Octapus\WinClient\bin\Debug\Relational.Octapus.Common.pdb
+C:\projects\Relational.Octapus\WinClient\bin\Debug\Relational.Octapus.Persistence.ExternalFiles.pdb
+C:\projects\Relational.Octapus\WinClient\bin\Debug\Relational.Octapus.Persistence.pdb
+C:\projects\Relational.Octapus\WinClient\bin\Debug\Workspace.SourceSafe.pdb
+C:\projects\Relational.Octapus\WinClient\bin\Debug\Workspace.pdb
+C:\projects\Relational.Octapus\WinClient\bin\Debug\NLog.xml
+C:\projects\Relational.Octapus\WinClient\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\projects\Relational.Octapus\WinClient\obj\x86\Debug\App.baml
+C:\projects\Relational.Octapus\WinClient\obj\x86\Debug\MainWindow.g.cs
+C:\projects\Relational.Octapus\WinClient\obj\x86\Debug\App.g.cs
+C:\projects\Relational.Octapus\WinClient\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+C:\projects\Relational.Octapus\WinClient\obj\x86\Debug\Relational.Octapus.WinClient_MarkupCompile.cache
+C:\projects\Relational.Octapus\WinClient\obj\x86\Debug\Relational.Octapus.WinClient_MarkupCompile.lref
+C:\projects\Relational.Octapus\WinClient\obj\x86\Debug\MainWindow.baml
+C:\projects\Relational.Octapus\WinClient\obj\x86\Debug\Relational.Octapus.WinClient.g.resources
+C:\projects\Relational.Octapus\WinClient\obj\x86\Debug\Relational.Octapus.WinClient.Properties.Resources.resources
+C:\projects\Relational.Octapus\WinClient\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\projects\Relational.Octapus\WinClient\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\projects\Relational.Octapus\WinClient\obj\x86\Debug\Relational.Octapus.WinClient.exe
+C:\projects\Relational.Octapus\WinClient\obj\x86\Debug\Relational.Octapus.WinClient.pdb
+C:\git\Relational.Octapus\WinClient\bin\Debug\Relational.Octapus.WinClient.exe.config
+C:\git\Relational.Octapus\WinClient\obj\x86\Debug\Relational.Octapus.WinClient.exe
+C:\git\Relational.Octapus\WinClient\obj\x86\Debug\Relational.Octapus.WinClient.pdb

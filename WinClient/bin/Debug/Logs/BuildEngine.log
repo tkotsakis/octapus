@@ -1,0 +1,208 @@
+2015-02-09 151531 : BuildEngine  
+ Info : BuildEngine Task Initialized for application:ALPHASEDEV
+2015-02-09 151532 : BuildEngine  
+ Info : VSS DB Downloaded
+2015-02-09 151533 : BuildEngine  
+ Info : GetLatestScript Created
+2015-02-09 151533 : BuildEngine  
+ Info : Getting Latest Code
+2015-02-09 152229 : BuildEngine  
+ Info : GetLatest Code Complete
+2015-02-09 152229 : BuildEngine  
+ Info : Preparing Build Environment 
+2015-02-09 152229 : BuildEngine  
+ Info : ALPHASEDEV Creating Data Script
+2015-02-09 152230 : BuildEngine  
+ Info : ALPHASEDEV Copying Source Code 
+2015-02-09 152242 : BuildEngine  
+ Info : ALPHASEDEV Creating Version Info 
+2015-02-09 152242 : BuildEngine  
+ Info : ALPHASEDEV Implant 
+2015-02-09 152244 : BuildEngine  
+ Info : Implant Library C:\Octapus\Temp\iapply\iapply.pbl 
+2015-02-09 152244 : BuildEngine  
+ Info : Implant Library C:\Octapus\Temp\imain\imain.pbl 
+2015-02-09 152244 : BuildEngine  
+ Info : Implant Library C:\Octapus\Temp\sekrnl0\sekrnl0.pbl 
+2015-02-09 152244 : BuildEngine  
+ Info : Implant Library C:\Octapus\Temp\seall\seall.pbl 
+2015-02-09 152245 : BuildEngine  
+ Info : Implant Library C:\Octapus\Temp\sesearch\sesearch.pbl 
+2015-02-09 152245 : BuildEngine  
+ Info : Implant Library C:\Octapus\Temp\secbs\secbs.pbl 
+2015-02-09 152245 : BuildEngine  
+ Info : Implant Library C:\Octapus\Temp\secl\secl.pbl 
+2015-02-09 152245 : BuildEngine  
+ Info : Implant Library C:\Octapus\Temp\secc\secc.pbl 
+2015-02-09 152245 : BuildEngine  
+ Info : Implant Library C:\Octapus\Temp\sedc\sedc.pbl 
+2015-02-09 152245 : BuildEngine  
+ Info : Implant Library C:\Octapus\Temp\sehl\sehl.pbl 
+2015-02-09 152246 : BuildEngine  
+ Info : Implant Library C:\Octapus\Temp\sehl_rpt\sehl_rpt.pbl 
+2015-02-09 152246 : BuildEngine  
+ Info : Implant Library C:\Octapus\Temp\seuc\seuc.pbl 
+2015-02-09 152246 : BuildEngine  
+ Info : Implant Library C:\Octapus\Temp\serep\serep.pbl 
+2015-02-09 152246 : BuildEngine  
+ Info : Implant Library C:\Octapus\Temp\secrebu\secrebu.pbl 
+2015-02-09 152247 : BuildEngine  
+ Info : Implant Library C:\Octapus\Temp\iaadm\iaadm.pbl 
+2015-02-09 152247 : BuildEngine  
+ Info : Implant Library C:\Octapus\Temp\admcommon\admcommon.pbl 
+2015-02-09 152247 : BuildEngine  
+ Info : Implant Library C:\Octapus\Temp\iasectors\iasectors.pbl 
+2015-02-09 152247 : BuildEngine  
+ Info : Implant Library C:\Octapus\Temp\admflow\admflow.pbl 
+2015-02-09 152247 : BuildEngine  
+ Info : Implant Library C:\Octapus\Temp\admparam\admparam.pbl 
+2015-02-09 152247 : BuildEngine  
+ Info : Implant Library C:\Octapus\Temp\admprod\admprod.pbl 
+2015-02-09 152248 : BuildEngine  
+ Info : Implant Library C:\Octapus\Temp\admrep\admrep.pbl 
+2015-02-09 152248 : BuildEngine  
+ Info : Implant Library C:\Octapus\Temp\admscore\admscore.pbl 
+2015-02-09 152248 : BuildEngine  
+ Info : Implant Library C:\Octapus\Temp\admsim\admsim.pbl 
+2015-02-09 152248 : BuildEngine  
+ Info : Implant Library C:\Octapus\Temp\admsys\admsys.pbl 
+2015-02-09 152248 : BuildEngine  
+ Info : Implant Library C:\Octapus\Temp\secommon\secommon.pbl 
+2015-02-09 152249 : BuildEngine  
+ Info : Implant Library C:\Octapus\Temp\iacommon0\iacommon0.pbl 
+2015-02-09 152249 : BuildEngine  
+ Info : Implant Library C:\Octapus\Temp\iacommon1\iacommon1.pbl 
+2015-02-09 152249 : BuildEngine  
+ Info : Implant Library C:\Octapus\Temp\iacommon2\iacommon2.pbl 
+2015-02-09 152250 : BuildEngine  
+ Info : Implant Library C:\Octapus\Temp\iacommonproxies\iacommonproxies.pbl 
+2015-02-09 152250 : BuildEngine  
+ Info : Implant Library C:\Octapus\Temp\pcalib00\pcalib00.pbl 
+2015-02-09 152250 : BuildEngine  
+ Info : Implant Library C:\Octapus\Temp\pcalib01\pcalib01.pbl 
+2015-02-09 152250 : BuildEngine  
+ Info : Implant Library C:\Octapus\Temp\pcalib03\pcalib03.pbl 
+2015-02-09 152250 : BuildEngine  
+ Info : Implant Library C:\Octapus\Temp\pcalib04\pcalib04.pbl 
+2015-02-09 152251 : BuildEngine  
+ Info : Implant Library C:\Octapus\Temp\pcalib05\pcalib05.pbl 
+2015-02-09 152251 : BuildEngine  
+ Info : Implant Library C:\Octapus\Temp\ialic\ialic.pbl 
+2015-02-09 152251 : BuildEngine  
+ Info : Implant Library C:\Octapus\Temp\pbvservice\pbvservice.pbl 
+2015-02-09 152251 : BuildEngine  
+ Info : Implant Library C:\Octapus\Temp\seeascbs\seeascbs.pbl 
+2015-02-09 152251 : BuildEngine  
+ Info : Implant Library C:\Octapus\Temp\seeascbs\sewebactions.pbl 
+2015-02-09 152251 : BuildEngine  
+ Info : Implant Library C:\Octapus\Temp\dw2xlsdemo_pb1052_7826\dw2xlsdemo_pb1052_7826.pbd 
+2015-02-09 152252 : BuildEngine  
+ Info : Implant Library C:\Octapus\Temp\pbdom105\pbdom105.pbd 
+2015-02-09 152252 : BuildEngine  
+ Info : Implant Library C:\Octapus\Temp\pbdwr105\pbdwr105.pbd 
+2015-02-09 152252 : BuildEngine  
+ Info : Implant Library C:\Octapus\Temp\pbdwr105\pbdwr105.pbd 
+2015-02-09 152252 : BuildEngine  
+ Info : Implant Library C:\Octapus\Temp\seeascbs\pbdwr105.pbd 
+2015-02-09 152252 : BuildEngine  
+ Info : Implant Library C:\Octapus\Temp\seeascbs\pbdom105.pbd 
+2015-02-09 152259 : BuildEngine  
+ Info : Creating OrcaScript
+2015-02-09 152300 : BuildEngine  
+ Info : Build Application Started 
+2015-02-09 152920 : BuildEngine  
+ Info : Build Application Completed
+2015-02-09 152920 : BuildEngine  
+ Info : Packaging
+2015-02-09 152931 : BuildEngine  
+ Info : GetParameters
+2015-02-09 152932 : BuildEngine  
+ Info : Verifying Version Information
+2015-02-09 152932 : BuildEngine  
+ Info : VerifyVersion: 
+2015-02-09 152933 : BuildEngine  
+ Info : Version Verification of Library admcommon.pbd 
+2015-02-09 152933 : BuildEngine  
+ Info : Version Verification of Library admflow.pbd 
+2015-02-09 152933 : BuildEngine  
+ Info : Version Verification of Library admparam.pbd 
+2015-02-09 152933 : BuildEngine  
+ Info : Version Verification of Library admprod.pbd 
+2015-02-09 152933 : BuildEngine  
+ Info : Version Verification of Library admrep.pbd 
+2015-02-09 152933 : BuildEngine  
+ Info : Version Verification of Library admscore.pbd 
+2015-02-09 152934 : BuildEngine  
+ Info : Version Verification of Library admsim.pbd 
+2015-02-09 152934 : BuildEngine  
+ Info : Version Verification of Library admsys.pbd 
+2015-02-09 152934 : BuildEngine  
+ Info : Version Verification of Library dw2xlsdemo_pb1052_7826.pbd 
+2015-02-09 152934 : BuildEngine  
+ Info : Version Verification of Library iaadm.pbd 
+2015-02-09 152934 : BuildEngine  
+ Info : Version Verification of Library iacommon0.pbd 
+2015-02-09 152934 : BuildEngine  
+ Info : Version Verification of Library iacommon1.pbd 
+2015-02-09 152934 : BuildEngine  
+ Info : Version Verification of Library iacommon2.pbd 
+2015-02-09 152934 : BuildEngine  
+ Info : Version Verification of Library iacommonproxies.pbd 
+2015-02-09 152934 : BuildEngine  
+ Info : Version Verification of Library ialic.pbd 
+2015-02-09 152935 : BuildEngine  
+ Info : Version Verification of Library iapply.pbd 
+2015-02-09 152935 : BuildEngine  
+ Info : Version Verification of Library iasectors.pbd 
+2015-02-09 152935 : BuildEngine  
+ Info : Version Verification of Library imain.pbd 
+2015-02-09 152935 : BuildEngine  
+ Info : Version Verification of Library pbdom105.pbd 
+2015-02-09 152935 : BuildEngine  
+ Info : Version Verification of Library pbdom90.pbd 
+2015-02-09 152935 : BuildEngine  
+ Info : Version Verification of Library PBDWR105.PBD 
+2015-02-09 152935 : BuildEngine  
+ Info : Version Verification of Library pbdwr90.pbd 
+2015-02-09 152935 : BuildEngine  
+ Info : Version Verification of Library pbsoapclient105.pbd 
+2015-02-09 152935 : BuildEngine  
+ Info : Version Verification of Library pbsoapclient90.pbd 
+2015-02-09 152935 : BuildEngine  
+ Info : Version Verification of Library pbvservice.pbd 
+2015-02-09 152936 : BuildEngine  
+ Info : Version Verification of Library pcalib00.pbd 
+2015-02-09 152936 : BuildEngine  
+ Info : Version Verification of Library pcalib01.pbd 
+2015-02-09 152936 : BuildEngine  
+ Info : Version Verification of Library pcalib03.pbd 
+2015-02-09 152936 : BuildEngine  
+ Info : Version Verification of Library pcalib04.pbd 
+2015-02-09 152936 : BuildEngine  
+ Info : Version Verification of Library pcalib05.pbd 
+2015-02-09 152936 : BuildEngine  
+ Info : Version Verification of Library seall.pbd 
+2015-02-09 152936 : BuildEngine  
+ Info : Version Verification of Library secbs.pbd 
+2015-02-09 152936 : BuildEngine  
+ Info : Version Verification of Library secc.pbd 
+2015-02-09 152936 : BuildEngine  
+ Info : Version Verification of Library secl.pbd 
+2015-02-09 152937 : BuildEngine  
+ Info : Version Verification of Library secommon.pbd 
+2015-02-09 152937 : BuildEngine  
+ Info : Version Verification of Library secrebu.pbd 
+2015-02-09 152937 : BuildEngine  
+ Info : Version Verification of Library sedc.pbd 
+2015-02-09 152937 : BuildEngine  
+ Info : Version Verification of Library sehl.pbd 
+2015-02-09 152937 : BuildEngine  
+ Info : Version Verification of Library sehl_rpt.pbd 
+2015-02-09 152937 : BuildEngine  
+ Info : Version Verification of Library sekrnl0.pbd 
+2015-02-09 152937 : BuildEngine  
+ Info : Version Verification of Library serep.pbd 
+2015-02-09 152937 : BuildEngine  
+ Info : Version Verification of Library sesearch.pbd 
+2015-02-09 152937 : BuildEngine  
+ Info : Version Verification of Library seuc.pbd 

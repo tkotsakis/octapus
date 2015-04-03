@@ -1,0 +1,7 @@
+D:\Visual Studio 2010\Projects\Relational.Octapus\Persistance.ExternalFiles\bin\Debug\Relational.Octapus.Persistance.ExternalFiles.dll
+D:\Visual Studio 2010\Projects\Relational.Octapus\Persistance.ExternalFiles\bin\Debug\Relational.Octapus.Persistance.ExternalFiles.pdb
+D:\Visual Studio 2010\Projects\Relational.Octapus\Persistance.ExternalFiles\bin\Debug\Relational.Octapus.Persistence.dll
+D:\Visual Studio 2010\Projects\Relational.Octapus\Persistance.ExternalFiles\bin\Debug\Relational.Octapus.Persistence.pdb
+D:\Visual Studio 2010\Projects\Relational.Octapus\Persistance.ExternalFiles\obj\Debug\Persistance.ExternalFiles.csprojResolveAssemblyReference.cache
+D:\Visual Studio 2010\Projects\Relational.Octapus\Persistance.ExternalFiles\obj\Debug\Relational.Octapus.Persistance.ExternalFiles.dll
+D:\Visual Studio 2010\Projects\Relational.Octapus\Persistance.ExternalFiles\obj\Debug\Relational.Octapus.Persistance.ExternalFiles.pdb

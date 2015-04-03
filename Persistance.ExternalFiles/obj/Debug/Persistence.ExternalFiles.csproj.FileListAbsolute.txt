@@ -1,0 +1,25 @@
+D:\Visual Studio 2010\Projects\Relational.Octapus\Persistance.ExternalFiles\bin\Debug\Relational.Octapus.Persistence.ExternalFiles.dll
+D:\Visual Studio 2010\Projects\Relational.Octapus\Persistance.ExternalFiles\bin\Debug\Relational.Octapus.Persistence.ExternalFiles.pdb
+D:\Visual Studio 2010\Projects\Relational.Octapus\Persistance.ExternalFiles\bin\Debug\Relational.Octapus.Persistence.dll
+D:\Visual Studio 2010\Projects\Relational.Octapus\Persistance.ExternalFiles\bin\Debug\Relational.Octapus.Persistence.pdb
+D:\Visual Studio 2010\Projects\Relational.Octapus\Persistance.ExternalFiles\obj\Debug\Persistence.ExternalFiles.csprojResolveAssemblyReference.cache
+D:\Visual Studio 2010\Projects\Relational.Octapus\Persistance.ExternalFiles\obj\Debug\Relational.Octapus.Persistence.ExternalFiles.dll
+D:\Visual Studio 2010\Projects\Relational.Octapus\Persistance.ExternalFiles\obj\Debug\Relational.Octapus.Persistence.ExternalFiles.pdb
+C:\projects\Relational.Octapus\Persistance.ExternalFiles\bin\Debug\NLog.config
+C:\projects\Relational.Octapus\Persistance.ExternalFiles\bin\Debug\NLog.xsd
+C:\projects\Relational.Octapus\Persistance.ExternalFiles\bin\Debug\ApplicationParams.xml
+C:\projects\Relational.Octapus\Persistance.ExternalFiles\bin\Debug\VersionInfo.xml
+C:\projects\Relational.Octapus\Persistance.ExternalFiles\bin\Debug\WorkspaceProfile.config
+C:\projects\Relational.Octapus\Persistance.ExternalFiles\bin\Debug\Relational.Octapus.Persistence.ExternalFiles.dll.config
+C:\projects\Relational.Octapus\Persistance.ExternalFiles\bin\Debug\Relational.Octapus.Persistence.ExternalFiles.dll
+C:\projects\Relational.Octapus\Persistance.ExternalFiles\bin\Debug\Relational.Octapus.Persistence.ExternalFiles.pdb
+C:\projects\Relational.Octapus\Persistance.ExternalFiles\bin\Debug\Relational.Octapus.Persistence.dll
+C:\projects\Relational.Octapus\Persistance.ExternalFiles\bin\Debug\Sybase.AdoNet4.AseClient.dll
+C:\projects\Relational.Octapus\Persistance.ExternalFiles\bin\Debug\NLog.dll
+C:\projects\Relational.Octapus\Persistance.ExternalFiles\bin\Debug\Relational.Octapus.Persistence.pdb
+C:\projects\Relational.Octapus\Persistance.ExternalFiles\bin\Debug\NLog.xml
+C:\projects\Relational.Octapus\Persistance.ExternalFiles\obj\Debug\ResolveAssemblyReference.cache
+C:\projects\Relational.Octapus\Persistance.ExternalFiles\obj\Debug\Interop.MSTSCLib.dll
+C:\projects\Relational.Octapus\Persistance.ExternalFiles\obj\Debug\Persistence.ExternalFiles.csproj.ResolveComReference.cache
+C:\projects\Relational.Octapus\Persistance.ExternalFiles\obj\Debug\Relational.Octapus.Persistence.ExternalFiles.dll
+C:\projects\Relational.Octapus\Persistance.ExternalFiles\obj\Debug\Relational.Octapus.Persistence.ExternalFiles.pdb

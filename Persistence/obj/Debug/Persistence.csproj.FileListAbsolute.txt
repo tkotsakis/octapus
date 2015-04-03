@@ -1,0 +1,16 @@
+D:\Visual Studio 2010\Projects\Relational.Octapus\Persistence\bin\Debug\Relational.Octapus.Persistence.dll
+D:\Visual Studio 2010\Projects\Relational.Octapus\Persistence\bin\Debug\Relational.Octapus.Persistence.pdb
+D:\Visual Studio 2010\Projects\Relational.Octapus\Persistence\obj\Debug\Relational.Octapus.Persistence.dll
+D:\Visual Studio 2010\Projects\Relational.Octapus\Persistence\obj\Debug\Relational.Octapus.Persistence.pdb
+C:\projects\Relational.Octapus\Persistence\bin\Debug\NLog.config
+C:\projects\Relational.Octapus\Persistence\bin\Debug\NLog.xsd
+C:\projects\Relational.Octapus\Persistence\bin\Debug\Relational.Octapus.Persistence.dll
+C:\projects\Relational.Octapus\Persistence\bin\Debug\Relational.Octapus.Persistence.pdb
+C:\projects\Relational.Octapus\Persistence\bin\Debug\NLog.dll
+C:\projects\Relational.Octapus\Persistence\bin\Debug\Relational.Octapus.Common.dll
+C:\projects\Relational.Octapus\Persistence\bin\Debug\DiffPlex.dll
+C:\projects\Relational.Octapus\Persistence\bin\Debug\Relational.Octapus.Common.pdb
+C:\projects\Relational.Octapus\Persistence\bin\Debug\NLog.xml
+C:\projects\Relational.Octapus\Persistence\obj\Debug\ResolveAssemblyReference.cache
+C:\projects\Relational.Octapus\Persistence\obj\Debug\Relational.Octapus.Persistence.dll
+C:\projects\Relational.Octapus\Persistence\obj\Debug\Relational.Octapus.Persistence.pdb

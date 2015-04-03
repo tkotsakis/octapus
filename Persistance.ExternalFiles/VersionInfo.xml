@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<versionInfo>
+  <ALPHASEDEV>
+    <BuildNumber></BuildNumber>
+    <BuildSeqNo>21</BuildSeqNo>
+    <BuildDate></BuildDate>
+    <Username>Octapus</Username>
+    <Computer>OCTAPUS</Computer>
+    <Domain></Domain>
+    <ClientHostName></ClientHostName>
+    <ExtraInfo>ExtraInformation</ExtraInfo>
+  </ALPHASEDEV>
+
+  <ALPHASEDEVBCK>
+    <BuildNumber></BuildNumber>
+    <BuildSeqNo>1</BuildSeqNo>
+    <BuildDate></BuildDate>
+    <Username>Octapus</Username>
+    <Computer>OCTAPUS</Computer>
+    <Domain></Domain>
+    <ClientHostName></ClientHostName>
+    <ExtraInfo>ExtraInformation</ExtraInfo>
+  </ALPHASEDEVBCK>
+
+  <ALPHAALDEV>
+    <BuildNumber></BuildNumber>
+    <BuildSeqNo>1</BuildSeqNo>
+    <BuildDate></BuildDate>
+    <Username>Octapus</Username>
+    <Computer>OCTAPUS</Computer>
+    <Domain>inner.relational.gr</Domain>
+    <ClientHostName></ClientHostName>
+    <ExtraInfo>ExtraInformation</ExtraInfo>
+  </ALPHAALDEV>
+
+  <ALPHAFYDEV>
+    <BuildNumber></BuildNumber>
+    <BuildSeqNo>1</BuildSeqNo>
+    <BuildDate></BuildDate>
+    <Username>Octapus</Username>
+    <Computer>OCTAPUS</Computer>
+    <Domain></Domain>
+    <ClientHostName></ClientHostName>
+    <ExtraInfo>ExtraInformation</ExtraInfo>
+  </ALPHAFYDEV>
+
+  <ALPHABGDEV>
+    <BuildNumber></BuildNumber>
+    <BuildSeqNo>1</BuildSeqNo>
+    <BuildDate></BuildDate>
+    <Username>Octapus</Username>
+    <Computer>OCTAPUS</Computer>
+    <Domain></Domain>
+    <ClientHostName></ClientHostName>
+    <ExtraInfo>ExtraInformation</ExtraInfo>
+  </ALPHABGDEV>
+
+  <ALPHASEPROD>
+    <BuildNumber></BuildNumber>
+    <BuildSeqNo>1</BuildSeqNo>
+    <BuildDate></BuildDate>
+    <Username>Octapus</Username>
+    <Computer>OCTAPUS</Computer>
+    <Domain></Domain>
+    <ClientHostName></ClientHostName>
+    <ExtraInfo>ExtraInformation</ExtraInfo>
+  </ALPHASEPROD>
+
+  <ALPHAALPROD>
+    <BuildNumber></BuildNumber>
+    <BuildSeqNo>1</BuildSeqNo>
+    <BuildDate></BuildDate>
+    <Username>Octapus</Username>
+    <Computer>OCTAPUS</Computer>
+    <Domain></Domain>
+    <ClientHostName></ClientHostName>
+    <ExtraInfo>ExtraInformation</ExtraInfo>
+  </ALPHAALPROD>
+
+  <ALPHABGPROD>
+    <BuildNumber></BuildNumber>
+    <BuildSeqNo>1</BuildSeqNo>
+    <BuildDate></BuildDate>
+    <Username>Octapus</Username>
+    <Computer>OCTAPUS</Computer>
+    <Domain></Domain>
+    <ClientHostName></ClientHostName>
+    <ExtraInfo>ExtraInformation</ExtraInfo>
+  </ALPHABGPROD>
+
+  <ALPHAFYPROD>
+    <BuildNumber></BuildNumber>
+    <BuildSeqNo>1</BuildSeqNo>
+    <BuildDate></BuildDate>
+    <Username>Octapus</Username>
+    <Computer>OCTAPUS</Computer>
+    <Domain></Domain>
+    <ClientHostName></ClientHostName>
+    <ExtraInfo>ExtraInformation</ExtraInfo>
+  </ALPHAFYPROD>
+
+  <ALPHASEPRODBCK>
+    <BuildNumber></BuildNumber>
+    <BuildSeqNo>1</BuildSeqNo>
+    <BuildDate></BuildDate>
+    <Username>Octapus</Username>
+    <Computer>OCTAPUS</Computer>
+    <Domain></Domain>
+    <ClientHostName></ClientHostName>
+    <ExtraInfo>ExtraInformation</ExtraInfo>
+  </ALPHASEPRODBCK>
+  
+</versionInfo>

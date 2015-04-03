@@ -1,0 +1,12 @@
+C:\projects\Relational.Octapus\BuildEngine\bin\Debug\NLog.config
+C:\projects\Relational.Octapus\BuildEngine\bin\Debug\NLog.xsd
+C:\projects\Relational.Octapus\BuildEngine\bin\Debug\Relational.Octapus.Persistence.dll
+C:\projects\Relational.Octapus\BuildEngine\bin\Debug\Workspace.dll
+C:\projects\Relational.Octapus\BuildEngine\bin\Debug\NLog.dll
+C:\projects\Relational.Octapus\BuildEngine\bin\Debug\Relational.Octapus.Persistence.pdb
+C:\projects\Relational.Octapus\BuildEngine\bin\Debug\Workspace.pdb
+C:\projects\Relational.Octapus\BuildEngine\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\projects\Relational.Octapus\BuildEngine\bin\Debug\Relational.Octapus.BuildEngine.dll
+C:\projects\Relational.Octapus\BuildEngine\bin\Debug\Relational.Octapus.BuildEngine.pdb
+C:\projects\Relational.Octapus\BuildEngine\obj\x86\Debug\Relational.Octapus.BuildEngine.dll
+C:\projects\Relational.Octapus\BuildEngine\obj\x86\Debug\Relational.Octapus.BuildEngine.pdb

@@ -1,0 +1,9 @@
+D:\Visual Studio 2010\Projects\Relational.Octapus\Common\bin\Debug\Relational.Octapus.Common.dll
+D:\Visual Studio 2010\Projects\Relational.Octapus\Common\bin\Debug\Relational.Octapus.Common.pdb
+D:\Visual Studio 2010\Projects\Relational.Octapus\Common\obj\Debug\Relational.Octapus.Common.dll
+D:\Visual Studio 2010\Projects\Relational.Octapus\Common\obj\Debug\Relational.Octapus.Common.pdb
+C:\projects\Relational.Octapus\Common\bin\Debug\Relational.Octapus.Common.dll
+C:\projects\Relational.Octapus\Common\bin\Debug\Relational.Octapus.Common.pdb
+C:\projects\Relational.Octapus\Common\obj\Debug\ResolveAssemblyReference.cache
+C:\projects\Relational.Octapus\Common\obj\Debug\Relational.Octapus.Common.dll
+C:\projects\Relational.Octapus\Common\obj\Debug\Relational.Octapus.Common.pdb
