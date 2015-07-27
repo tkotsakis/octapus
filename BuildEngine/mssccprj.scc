@@ -1,0 +1,9 @@
+SCC = This is a Source Code Control file
+
+[BuildEngine.csproj]
+SCC_Aux_Path = "\\thiseas\VSS"
+SCC_Project_Name = "$/VS/2010/Relational.Octapus.root/Relational.Octapus/BuildEngine", AINEAAAA
+
+[BuildMachine.csproj]
+SCC_Aux_Path = "\\thiseas\VSS"
+SCC_Project_Name = "$/VS/2010/Relational.Octapus.root/Relational.Octapus/BuildEngine", AINEAAAA

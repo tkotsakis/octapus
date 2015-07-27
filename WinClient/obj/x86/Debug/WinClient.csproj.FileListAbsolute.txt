@@ -56,6 +56,3 @@ C:\projects\Relational.Octapus\WinClient\obj\x86\Debug\GenerateResource.read.1.t
 C:\projects\Relational.Octapus\WinClient\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\projects\Relational.Octapus\WinClient\obj\x86\Debug\Relational.Octapus.WinClient.exe
 C:\projects\Relational.Octapus\WinClient\obj\x86\Debug\Relational.Octapus.WinClient.pdb
-C:\git\Relational.Octapus\WinClient\bin\Debug\Relational.Octapus.WinClient.exe.config
-C:\git\Relational.Octapus\WinClient\obj\x86\Debug\Relational.Octapus.WinClient.exe
-C:\git\Relational.Octapus\WinClient\obj\x86\Debug\Relational.Octapus.WinClient.pdb

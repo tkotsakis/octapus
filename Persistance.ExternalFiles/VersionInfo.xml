@@ -110,5 +110,49 @@
     <ClientHostName></ClientHostName>
     <ExtraInfo>ExtraInformation</ExtraInfo>
   </ALPHASEPRODBCK>
+
+  <ALPHASEDEVRCT>
+    <BuildNumber></BuildNumber>
+    <BuildSeqNo>1</BuildSeqNo>
+    <BuildDate></BuildDate>
+    <Username>Octapus</Username>
+    <Computer>OCTAPUS</Computer>
+    <Domain></Domain>
+    <ClientHostName></ClientHostName>
+    <ExtraInfo>ExtraInformation</ExtraInfo>
+  </ALPHASEDEVRCT>
+
+  <ALPHAALDEVRCT>
+    <BuildNumber></BuildNumber>
+    <BuildSeqNo>1</BuildSeqNo>
+    <BuildDate></BuildDate>
+    <Username>Octapus</Username>
+    <Computer>OCTAPUS</Computer>
+    <Domain>inner.relational.gr</Domain>
+    <ClientHostName></ClientHostName>
+    <ExtraInfo>ExtraInformation</ExtraInfo>
+  </ALPHAALDEVRCT>
+
+  <ALPHAFYDEVRCT>
+    <BuildNumber></BuildNumber>
+    <BuildSeqNo>1</BuildSeqNo>
+    <BuildDate></BuildDate>
+    <Username>Octapus</Username>
+    <Computer>OCTAPUS</Computer>
+    <Domain></Domain>
+    <ClientHostName></ClientHostName>
+    <ExtraInfo>ExtraInformation</ExtraInfo>
+  </ALPHAFYDEVRCT>
+
+  <ALPHABGDEVRCT>
+    <BuildNumber></BuildNumber>
+    <BuildSeqNo>1</BuildSeqNo>
+    <BuildDate></BuildDate>
+    <Username>Octapus</Username>
+    <Computer>OCTAPUS</Computer>
+    <Domain></Domain>
+    <ClientHostName></ClientHostName>
+    <ExtraInfo>ExtraInformation</ExtraInfo>
+  </ALPHABGDEVRCT>
   
 </versionInfo>

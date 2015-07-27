@@ -20,6 +20,37 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Retrofit", "Retrofit\Retrofit.csproj", "{D07BFF3F-A4D2-4E78-AB98-70946E677D79}"
 EndProject
 Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 10
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Common\\Common.csproj
+		SccLocalPath1 = .
+		SccProjectFilePathRelativizedFromConnection1 = Common\\
+		SccProjectUniqueName2 = Console\\Console.csproj
+		SccLocalPath2 = .
+		SccProjectFilePathRelativizedFromConnection2 = Console\\
+		SccProjectUniqueName3 = Persistance.ExternalFiles\\Persistence.ExternalFiles.csproj
+		SccLocalPath3 = .
+		SccProjectFilePathRelativizedFromConnection3 = Persistance.ExternalFiles\\
+		SccProjectUniqueName4 = Persistence\\Persistence.csproj
+		SccLocalPath4 = .
+		SccProjectFilePathRelativizedFromConnection4 = Persistence\\
+		SccProjectUniqueName5 = WinClient\\WinClient.csproj
+		SccLocalPath5 = .
+		SccProjectFilePathRelativizedFromConnection5 = WinClient\\
+		SccProjectUniqueName6 = Workspace\\Workspace.csproj
+		SccLocalPath6 = .
+		SccProjectFilePathRelativizedFromConnection6 = Workspace\\
+		SccProjectUniqueName7 = Workspace.SourceSafe\\Workspace.SourceSafe.csproj
+		SccLocalPath7 = .
+		SccProjectFilePathRelativizedFromConnection7 = Workspace.SourceSafe\\
+		SccProjectUniqueName8 = BuildEngine\\BuildEngine.csproj
+		SccLocalPath8 = .
+		SccProjectFilePathRelativizedFromConnection8 = BuildEngine\\
+		SccProjectUniqueName9 = Retrofit\\Retrofit.csproj
+		SccLocalPath9 = .
+		SccProjectFilePathRelativizedFromConnection9 = Retrofit\\
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|Mixed Platforms = Debug|Mixed Platforms

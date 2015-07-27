@@ -1,0 +1,5 @@
+SCC = This is a Source Code Control file
+
+[Console.csproj]
+SCC_Aux_Path = "\\thiseas\VSS"
+SCC_Project_Name = "$/VS/2010/Relational.Octapus.root/Relational.Octapus/Console", KINEAAAA
