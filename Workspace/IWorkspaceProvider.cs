@@ -20,5 +20,6 @@ namespace Relational.Octapus.Workspace
         void CorrectPBGFile(string pbgFile, string libraryName);
         void AddItemToProject(string vssProject, string localProject, string vssObject, string comment);
         void RemoveItemFromProject(string vssObject);
+        List<PBLibrary> GetLocalLibrarylist(string applicationId, string targetPath, string targetFile);
     }
 }

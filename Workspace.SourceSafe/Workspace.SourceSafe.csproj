@@ -52,6 +52,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SourceSafeProvider.cs" />
     <Compile Include="SourceSafeControl.cs" />
+    <Compile Include="VSSItemInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj">

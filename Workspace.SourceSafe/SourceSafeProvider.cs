@@ -256,18 +256,33 @@ namespace Relational.Octapus.Workspace.SourceSafe
                     vssLIbraryPath = (workspaceParams.VssProjectPath + extLibPlusLibName).Replace("\\", "/");
                     localFullPath = workspaceParams.LocalVssWorkingPath + extLibPlusLibNameWithExt.Replace("\\","/");
                      libIndex = i;
+                    
+                     if (workspaceParams.EasLibNeeded == "1")
+                     {
+                        if (libNameWithExt.ToUpper().EndsWith("PBL") || (libNameWithExt.ToUpper().EndsWith("PBD")))
+                            this.libraryList.Add(new PBLibrary(libName, libNameWithExt, libraryResolvedPath, workspaceParams.VssProjectPath,
+                                                               workspaceParams.VssProductPath, vssLIbraryPath, libFullPath, extLibPlusLibName,
+                                                               extLibPlusLibNameWithExt, workspaceParams.LocalVssWorkingPath, libIndex, 
+                                                               isApplicationLibrary,localFullPath));
+                     }
 
-                    if (libNameWithExt.ToUpper().EndsWith("PBL") || (libNameWithExt.ToUpper().EndsWith("PBD")))
-                        this.libraryList.Add(new PBLibrary(libName, libNameWithExt, libraryResolvedPath, workspaceParams.VssProjectPath,
-                                                           workspaceParams.VssProductPath, vssLIbraryPath, libFullPath, extLibPlusLibName,
-                                                           extLibPlusLibNameWithExt, workspaceParams.LocalVssWorkingPath, libIndex, 
-                                                           isApplicationLibrary,localFullPath));
+                     if (workspaceParams.EasLibNeeded != "1")
+                     {
+                         if (isApplicationLibrary)
+                         {
+                             if (libNameWithExt.ToUpper().EndsWith("PBL") || (libNameWithExt.ToUpper().EndsWith("PBD")))
+                                 this.libraryList.Add(new PBLibrary(libName, libNameWithExt, libraryResolvedPath, workspaceParams.VssProjectPath,
+                                                                    workspaceParams.VssProductPath, vssLIbraryPath, libFullPath, extLibPlusLibName,
+                                                                    extLibPlusLibNameWithExt, workspaceParams.LocalVssWorkingPath, libIndex,
+                                                                    isApplicationLibrary, localFullPath));
+                         }
+                     }
 
-                    if ((libNameWithExt.ToUpper().EndsWith("PBL") || (libNameWithExt.ToUpper().EndsWith("PBD"))) && (!isApplicationLibrary))
-                        this.appServerLibraryList.Add(new PBLibrary(libName, libNameWithExt, libraryResolvedPath, workspaceParams.VssProjectPath,
-                                                           workspaceParams.VssProductPath, vssLIbraryPath, libFullPath, extLibPlusLibName,
-                                                           extLibPlusLibNameWithExt, workspaceParams.LocalVssWorkingPath, libIndex, 
-                                                           isApplicationLibrary,localFullPath));
+                        if ((libNameWithExt.ToUpper().EndsWith("PBL") || (libNameWithExt.ToUpper().EndsWith("PBD"))) && (!isApplicationLibrary))
+                            this.appServerLibraryList.Add(new PBLibrary(libName, libNameWithExt, libraryResolvedPath, workspaceParams.VssProjectPath,
+                                                               workspaceParams.VssProductPath, vssLIbraryPath, libFullPath, extLibPlusLibName,
+                                                               extLibPlusLibNameWithExt, workspaceParams.LocalVssWorkingPath, libIndex,
+                                                               isApplicationLibrary, localFullPath));
 
                     if ((libNameWithExt.ToUpper().EndsWith("PBL")) && (isApplicationLibrary))
                         this.clientLibraryList.Add(new PBLibrary(libName, libNameWithExt, libraryResolvedPath, workspaceParams.VssProjectPath,
@@ -350,6 +365,98 @@ namespace Relational.Octapus.Workspace.SourceSafe
             sourceSafeControl.RemoveItemFromProject(vssObject);
         }
 
+        public List<PBLibrary> GetLocalLibrarylist(string applicationId, string targetPath, string targetFile)
+        {
+            List<string> LibList, LibItem;
+            string libNameWithExt, libName, vssLIbraryPath, libFullPath, common = "common", iapply = "iapply", libCommon, localFullPath;
+            string pbtLiblist = "";
+            char quotes = '"';
+            bool isApplicationLibrary = false;
+            string extLibPlusLibName, extLibPlusLibNameWithExt, libraryResolvedPath;
+
+            try
+            {
+                var targetContent = File.ReadAllText(targetPath + "/" + targetFile);
+                pbtLiblist = Regex.Split(targetContent, @"LibList|liblist").Last().Split(new string[] { @";\r\ntype" }, StringSplitOptions.RemoveEmptyEntries).First();
+                string[] pathLevelPattern = { "..\\" };
+                string PBTfilename = String.Concat(targetPath, targetFile);
+
+                LibList = pbtLiblist.Split(';').ToList();
+                for (int i = 0; i < LibList.Count; i++)
+                {
+
+                    LibItem = LibList[i].Split(pathLevelPattern, StringSplitOptions.RemoveEmptyEntries).ToList();
+                    string basePath = applicationParams.TargetPath + "\\";
+                    int pathLevels = Regex.Matches(LibList[i], "[.][.]\\\\").Count;
+                    if (Regex.Matches(LibList[i], "[.][.]\\\\").Count > 0)
+                    {
+                        for (int level = 0; level < pathLevels; level++)
+                        {
+                            basePath = basePath.Substring(0, basePath.LastIndexOf('\\'));
+                        }
+                    }
+
+                    if (targetFile == workspaceParams.LibraryTargetPath) isApplicationLibrary = true;
+                    var targetPathList = targetPath.Split('/').ToList().Where(s => !string.IsNullOrWhiteSpace(s)).Distinct().ToList();
+                    var libWithExtension = LibList[i].Replace("\\\\", "-").Replace('"', '/').Replace("/", "").Replace('"', ' ').Split('-').LastOrDefault();
+                    libNameWithExt = String.IsNullOrWhiteSpace(LibList[i].Split('\\').Last().ToString().Split('"').Last()) ? Regex.Split(LibList[i], ("\\ ")).Last().ToString().Split(quotes).ToList().Distinct().LastOrDefault() : LibList[i].Split('\\').Last().ToString().Split('"').Last();
+                    libNameWithExt = String.IsNullOrWhiteSpace(libNameWithExt) ? libWithExtension : libNameWithExt;
+                    libName = isApplicationLibrary ? String.IsNullOrWhiteSpace(libNameWithExt.Split('.').First().ToString()) ? libNameWithExt.Split('.').First() : libNameWithExt.Split('.').First().ToString() : targetPathList.Last();
+                    libCommon = isApplicationLibrary ? (LibList[i].Contains(common) ? common + @"\" + libName + @"\" : iapply + @"\" + libName + @"\") : targetPathList.Take(targetPathList.Count() - 1).LastOrDefault() + @"\";
+                    libFullPath = applicationParams.TempPath + @"\" + libCommon + @"\" + @libNameWithExt;
+                    extLibPlusLibName = LibList[i].Contains(common) ? common + @"\" + libName + @"\" : iapply + @"\" + libName + @"\";
+                    extLibPlusLibNameWithExt = extLibPlusLibName + libNameWithExt;
+                    libraryResolvedPath = applicationParams.TempPath + libName + @"\" + libNameWithExt;
+                    vssLIbraryPath = (workspaceParams.VssProjectPath + extLibPlusLibName).Replace("\\", "/");
+                    localFullPath = workspaceParams.LocalVssWorkingPath + extLibPlusLibNameWithExt.Replace("\\", "/");
+                    libIndex = i;
+
+                    if (workspaceParams.EasLibNeeded == "1")
+                    {
+                        if (libNameWithExt.ToUpper().EndsWith("PBL") || (libNameWithExt.ToUpper().EndsWith("PBD")))
+                            this.libraryList.Add(new PBLibrary(libName, libNameWithExt, libraryResolvedPath, workspaceParams.VssProjectPath,
+                                                               workspaceParams.VssProductPath, vssLIbraryPath, libFullPath, extLibPlusLibName,
+                                                               extLibPlusLibNameWithExt, workspaceParams.LocalVssWorkingPath, libIndex,
+                                                               isApplicationLibrary, localFullPath));
+                    }
+
+                    if (workspaceParams.EasLibNeeded != "1")
+                    {
+                        if (isApplicationLibrary)
+                        {
+                            if (libNameWithExt.ToUpper().EndsWith("PBL") || (libNameWithExt.ToUpper().EndsWith("PBD")))
+                                this.libraryList.Add(new PBLibrary(libName, libNameWithExt, libraryResolvedPath, workspaceParams.VssProjectPath,
+                                                                   workspaceParams.VssProductPath, vssLIbraryPath, libFullPath, extLibPlusLibName,
+                                                                   extLibPlusLibNameWithExt, workspaceParams.LocalVssWorkingPath, libIndex,
+                                                                   isApplicationLibrary, localFullPath));
+                        }
+                    }
+
+                    if ((libNameWithExt.ToUpper().EndsWith("PBL") || (libNameWithExt.ToUpper().EndsWith("PBD"))) && (!isApplicationLibrary))
+                        this.appServerLibraryList.Add(new PBLibrary(libName, libNameWithExt, libraryResolvedPath, workspaceParams.VssProjectPath,
+                                                           workspaceParams.VssProductPath, vssLIbraryPath, libFullPath, extLibPlusLibName,
+                                                           extLibPlusLibNameWithExt, workspaceParams.LocalVssWorkingPath, libIndex,
+                                                           isApplicationLibrary, localFullPath));
+
+                    if ((libNameWithExt.ToUpper().EndsWith("PBL")) && (isApplicationLibrary))
+                        this.clientLibraryList.Add(new PBLibrary(libName, libNameWithExt, libraryResolvedPath, workspaceParams.VssProjectPath,
+                                                           workspaceParams.VssProductPath, vssLIbraryPath, libFullPath, extLibPlusLibName,
+                                                           extLibPlusLibNameWithExt, workspaceParams.LocalVssWorkingPath, libIndex,
+                                                           isApplicationLibrary, localFullPath));
+
+
+                }
+                libraryList = libraryList.OrderByDescending(x => x.LibraryNameWithExtension.Split('.').LastOrDefault()).ToList();
+            }
+            catch (Exception ex)
+            {
+
+                logger.LogInfo("GetLocalLibrarylist: " + ex.StackTrace + "-" + ex.Message);
+            }
+
+            return libraryList; ;
+        }
+        
         public void ListCheckOutObjects()
         {
             sourceSafeControl.CheckOutObjectsExist(workspaceParams.VssProjectPath);

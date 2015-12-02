@@ -47,7 +47,7 @@ namespace Relational.Octapus.Common
             foreach (string file in Directory.GetFiles(sourcePath, "*.pbl", SearchOption.AllDirectories))
             {
                 var folder = Regex.Split(Path.GetDirectoryName(file), @"\\").LastOrDefault();
-                var fileName = Regex.Split(file, @"\\").LastOrDefault();
+                var fileName = Regex.Split(file, @"\\").LastOrDefault(); 
                 File.SetAttributes(file, FileAttributes.Normal);
                 File.Copy(file, Path.Combine(destinationPath + @"/" + folder, fileName), true);
             }
@@ -60,7 +60,7 @@ namespace Relational.Octapus.Common
                 if (folder.StartsWith("pbd") || folder.StartsWith("dw2") || folder.StartsWith("pbsoap") || folder.StartsWith("Rule"))
                 {
                     File.SetAttributes(file, FileAttributes.Normal);
-                    var fileName = Regex.Split(file, @"\\").LastOrDefault();
+                    var fileName = Regex.Split(file, @"\\").LastOrDefault(); 
                     File.Copy(file, Path.Combine(destinationPath + @"/" + folder, fileName), true);
                 }
             }
@@ -220,10 +220,14 @@ namespace Relational.Octapus.Common
                 GC.Collect();
 
                 if (!Directory.Exists(tempPath)) Directory.CreateDirectory(tempPath);
+                GC.Collect();
                 Packager.CopySourceCode(localVssProductPath, tempPath);
                 GC.Collect();
-                Packager.CopySourceCode(localVssCommonPath, tempPath);
-                GC.Collect();
+                if (!localVssProductPath.Equals(localVssCommonPath))
+                {
+                    Packager.CopySourceCode(localVssCommonPath, tempPath);
+                    GC.Collect();
+                }
 
                 if (!Directory.Exists(buildOutFolder)) Directory.CreateDirectory(buildOutFolder);
                 Packager.CopyBuildLibraries(tempPath, Path.Combine(tempPath, buildOutFolder));

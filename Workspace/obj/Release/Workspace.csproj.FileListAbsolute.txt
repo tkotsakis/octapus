@@ -1,0 +1,12 @@
+C:\projects\Relational.Octapus\Workspace\bin\Release\NLog.config
+C:\projects\Relational.Octapus\Workspace\bin\Release\NLog.xsd
+C:\projects\Relational.Octapus\Workspace\bin\Release\Workspace.dll
+C:\projects\Relational.Octapus\Workspace\bin\Release\Workspace.pdb
+C:\projects\Relational.Octapus\Workspace\bin\Release\Relational.Octapus.Persistence.dll
+C:\projects\Relational.Octapus\Workspace\bin\Release\Sybase.AdoNet4.AseClient.dll
+C:\projects\Relational.Octapus\Workspace\bin\Release\NLog.dll
+C:\projects\Relational.Octapus\Workspace\bin\Release\Relational.Octapus.Persistence.pdb
+C:\projects\Relational.Octapus\Workspace\bin\Release\NLog.xml
+C:\projects\Relational.Octapus\Workspace\obj\Release\ResolveAssemblyReference.cache
+C:\projects\Relational.Octapus\Workspace\obj\Release\Workspace.dll
+C:\projects\Relational.Octapus\Workspace\obj\Release\Workspace.pdb

@@ -1,0 +1,6 @@
+C:\projects\Relational.Octapus\Common\bin\Release\Relational.Octapus.Common.dll
+C:\projects\Relational.Octapus\Common\bin\Release\Relational.Octapus.Common.pdb
+C:\projects\Relational.Octapus\Common\bin\Release\DiffPlex.dll
+C:\projects\Relational.Octapus\Common\obj\Release\ResolveAssemblyReference.cache
+C:\projects\Relational.Octapus\Common\obj\Release\Relational.Octapus.Common.dll
+C:\projects\Relational.Octapus\Common\obj\Release\Relational.Octapus.Common.pdb

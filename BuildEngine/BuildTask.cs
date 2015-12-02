@@ -156,13 +156,14 @@ namespace Relational.Octapus.BuildEngine
             var buildSourceCodeFolder = Path.Combine(buildTaskParameters.BuildsFolder, Path.Combine(buildFolder, buildTaskParameters.BuildSourceCodeFolderName));
             var product = buildTaskParameters.Productname.Replace("-", "");
             var canCreateWorkableClient = buildTaskParameters.PrepareWorkableClient;
+            var scriptPath = applicationParams.TempPath + "/InsertData.sql";
             
             try
             {
 
                 logger.LogInfo(applicationId + " Creating Data Script");
 
-                InsertBuildData(buildMode, versionParams.BuildNumber, ref pbdFiles);
+                InsertBuildData(buildMode, scriptPath,versionParams.BuildNumber, ref pbdFiles);
 
                 logger.LogInfo(applicationId + " Copying Source Code " );
 
@@ -472,11 +473,10 @@ namespace Relational.Octapus.BuildEngine
 
         }
 
-        private void InsertBuildData(BuildMode buildMode, string buildNumber, ref string pbdFiles)
+        public void InsertBuildData(BuildMode buildMode, string path, string buildNumber, ref string pbdFiles)
         {
             try
             {
-                string path = applicationParams.TempPath + "/InsertData.sql";
                 string delete = "DELETE FROM pbbuild WHERE lib_name = '", ifExists = "IF EXISTS (SELECT 1 FROM sysobjects WHERE name = 'pbbuild' AND type = 'U')";
                 string statement = "INSERT INTO dbo.pbbuild (application_id, lib_name, build_number,build_seqno, build_date, active)", values = "VALUES (", changeLine = "\r\n";
                 string singleQuote = "'", comma = ",", par = ")", content = "", begin = "BEGIN", end = "END", libraryName;

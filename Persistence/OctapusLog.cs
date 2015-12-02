@@ -48,7 +48,7 @@ namespace Relational.Octapus.Persistence
         public  void LogInfo(string message)
         {
             HookCall("Info", message);
-            this.logger.Info(message);
+            this.logger.Info(message + Environment.NewLine);
         }
         public void LogFatal(string message)
         {

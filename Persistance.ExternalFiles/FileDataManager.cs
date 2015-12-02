@@ -138,6 +138,7 @@ namespace Relational.Octapus.Persistence.ExternalFiles
             workspaceParams.ClientNecFilesPath = configOperator.GetParameterValue("VSS", "clientNecFilesPath");
             workspaceParams.Pbw                = configOperator.GetParameterValue("PBORCA", "Pbw");
             workspaceParams.ApplicationId = applicationId;
+            workspaceParams.EasLibNeeded = configOperator.GetParameterValue("VSS", "EasLibNeeded");
             workspaceParams.DBConnectionString = doc.SelectSingleNode("workspace/DBConnection/" + applicationId).InnerText;
             var configurationMode = doc.SelectSingleNode("workspace/ConfigurationMode/" + applicationId).InnerText;
             ConfigurationMode configMode = (ConfigurationMode)Enum.Parse(typeof(ConfigurationMode), configurationMode);

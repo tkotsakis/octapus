@@ -28,5 +28,6 @@ namespace Relational.Octapus.Persistence
         public string ApplicationIdTo { get; set; }
         public string DBConnectionString { get; set; }
         public ConfigurationMode ConfigurationMode { get; set; }
+        public string EasLibNeeded { get; set; }
     }
 }

@@ -1,0 +1,3 @@
+C:\projects\Relational.Octapus\Persistance.ExternalFiles\obj\Release\ResolveAssemblyReference.cache
+C:\projects\Relational.Octapus\Persistance.ExternalFiles\obj\Release\Interop.MSTSCLib.dll
+C:\projects\Relational.Octapus\Persistance.ExternalFiles\obj\Release\Persistence.ExternalFiles.csproj.ResolveComReference.cache

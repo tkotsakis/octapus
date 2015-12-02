@@ -1,13 +1,2 @@
-2015-07-07 094623 : OctapusLogger  
+2015-10-09 171130 : OctapusLogger  
  Info : appllib.pbt downloaded! 
-2015-07-07 094623 : OctapusLogger  
- Error : GetPBTFile: File or project not found
-2015-07-07 094624 : OctapusLogger  
- Info : GetLibrarylist:    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
-   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
-   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize)
-   at System.IO.StreamReader..ctor(String path, Encoding encoding)
-   at System.IO.File.InternalReadAllText(String path, Encoding encoding)
-   at System.IO.File.ReadAllText(String path)
-   at Relational.Octapus.Workspace.SourceSafe.SourceSafeProvider.GetLibrarylist(String applicationId, String targetPath, String targetFile) in C:\projects\Relational.Octapus\Workspace.SourceSafe\SourceSafeProvider.cs:line 225-Could not find file 'C:\Octapus\Temp\fyeascbs.pbt'.

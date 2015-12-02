@@ -1,0 +1,4 @@
+C:\projects\Relational.Octapus\WinClient\obj\x86\Release\ResolveAssemblyReference.cache
+C:\projects\Relational.Octapus\WinClient\obj\x86\Release\App.baml
+C:\projects\Relational.Octapus\WinClient\obj\x86\Release\App.g.cs
+C:\projects\Relational.Octapus\WinClient\obj\x86\Release\Relational.Octapus.WinClient_MarkupCompile.cache

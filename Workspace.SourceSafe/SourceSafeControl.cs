@@ -305,6 +305,32 @@ namespace Workspace.SourceSafe
             }
         }
 
+        public bool CheckOutObjectsList(string vssProject, List<VSSItemInfo> chekcedOutList)
+        {
+            IVSSItem vssItem = vssDB.get_VSSItem(vssProject, false);
+            //List<VSSItemInfo> chekcedOutList = new List<VSSItemInfo>();
+            GetListCheckedOutItems(vssItem, ref chekcedOutList);
+            return (chekcedOutList.Count == 0 ? false : true);
+        }
+
+        private void GetListCheckedOutItems(IVSSItem item, ref List<VSSItemInfo> chekcedOutList)
+        {
+            foreach (IVSSItem i in item.get_Items(false))
+            {
+                if (i.Type == 1 && i.IsCheckedOut != 0)
+                {
+                    foreach (IVSSCheckout vssCheckout in i.Checkouts)
+                    {
+                        chekcedOutList.Add(
+                            new VSSItemInfo (i.Spec.ToString(),true, vssCheckout.Username,vssCheckout.VersionNumber,vssCheckout.Date.ToString(),vssCheckout.Machine)
+                            );
+                    }
+                }
+                else if (i.Type == 0 && i.Items.Count != 0)
+                    GetListCheckedOutItems(i, ref chekcedOutList);
+            }
+        }
+
         public void AddItemToProject(string vssProject, string localProject, string vssObjectFile,string comment)
         {
             try

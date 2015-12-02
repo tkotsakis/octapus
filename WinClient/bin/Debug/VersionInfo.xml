@@ -154,5 +154,49 @@
     <ClientHostName></ClientHostName>
     <ExtraInfo>ExtraInformation</ExtraInfo>
   </ALPHABGDEVRCT>
+
+  <EFGBGDEV>
+    <BuildNumber>
+    </BuildNumber>
+    <BuildSeqNo>1</BuildSeqNo>
+    <BuildDate>
+    </BuildDate>
+    <Username>Octapus</Username>
+    <Computer>OCTAPUS</Computer>
+    <Domain>
+    </Domain>
+    <ClientHostName>
+    </ClientHostName>
+    <ExtraInfo>ExtraInformation</ExtraInfo>
+  </EFGBGDEV>
+
+  <NBBGDEV>
+    <BuildNumber>
+    </BuildNumber>
+    <BuildSeqNo>1</BuildSeqNo>
+    <BuildDate>
+    </BuildDate>
+    <Username>Octapus</Username>
+    <Computer>OCTAPUS</Computer>
+    <Domain>
+    </Domain>
+    <ClientHostName>
+    </ClientHostName>
+    <ExtraInfo>ExtraInformation</ExtraInfo>
+  </NBBGDEV>
+  <NBBGPROD>
+    <BuildNumber>
+    </BuildNumber>
+    <BuildSeqNo>1</BuildSeqNo>
+    <BuildDate>
+    </BuildDate>
+    <Username>Octapus</Username>
+    <Computer>OCTAPUS</Computer>
+    <Domain>
+    </Domain>
+    <ClientHostName>
+    </ClientHostName>
+    <ExtraInfo>ExtraInformation</ExtraInfo>
+  </NBBGPROD>
   
 </versionInfo>

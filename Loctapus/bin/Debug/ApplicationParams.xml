@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+  <applicationParameters>
+    <InitializationFile>\\thalis\VSS\srcsafe.ini</InitializationFile>
+    <Username>Octapus</Username>
+    <Password></Password>
+    <PbgFormat>Save Format v3.0(19990112)</PbgFormat>
+    <PbgBeginLib>@begin Libraries</PbgBeginLib>
+    <PbgBeginObj>@begin Objects</PbgBeginObj>
+    <PbgEnd>@end;</PbgEnd>
+    <PbgExtension>.pbg</PbgExtension>
+    <NewLineSeparator>\r\n</NewLineSeparator>
+    <NewPbgFileSuffix>_new</NewPbgFileSuffix>
+    <Quote>""</Quote>
+    <Space> </Space>
+    <QuestionMark>;</QuestionMark>
+    <DiskSpaceNeededInMb>200</DiskSpaceNeededInMb>
+    <TargetPath>C:\Octapus</TargetPath>
+    <TempPath>C:\Octapus\Temp\</TempPath>
+    <LogPath>C:\Octapus\Logs</LogPath>
+    <RootPath></RootPath>
+    <VssContent>C:\Octapus\VSS_DB.txt</VssContent>
+    <BuildSession>start session</BuildSession>
+  </applicationParameters>
