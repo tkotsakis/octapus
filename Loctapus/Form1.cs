@@ -15,6 +15,8 @@ using Relational.Octapus.BuildEngine;
 using NLog.Targets;
 using NLog;
 using System.IO;
+using System.Reflection;
+using System.Xml;
 
 namespace Loctapus
 {
@@ -27,10 +29,10 @@ namespace Loctapus
         DataManagerFactory dataManagerFactory;
         IDataManager dataManager;
         List<string> availableWorkspaces;
-        string message = "", pbdFiles="";
+        string message = "", pbdFiles="",path="";
         ApplicationParams applicationParams;
         WorkspaceParams workspaceParams;
-        BuildTaskParameters buildParameters;
+        VersionParams versionParams;
         BuildTask buildTask;
 
         public Form1()
@@ -51,6 +53,7 @@ namespace Loctapus
             NLog.Config.SimpleConfigurator.ConfigureForTargetLogging(target, LogLevel.Trace);
             Logger logger1 = LogManager.GetLogger("WindowLogger");
             logger1.Info("info log message, " + Environment.NewLine);
+            logger.LogInfo(AppDomain.CurrentDomain.BaseDirectory);
 
             ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
             ToolTip1.SetToolTip(this.button3, "RootPath");
@@ -60,6 +63,7 @@ namespace Loctapus
 
             ToolTip ToolTip3 = new System.Windows.Forms.ToolTip();
             ToolTip2.SetToolTip(this.button2, "Put Version Information to Libraries");
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -91,50 +95,59 @@ namespace Loctapus
 
         private void Build()
         {
-            string scriptPath = "";
-            Stopwatch stopwatch = new Stopwatch();
-            stopwatch.Start();
-
-            version = Guid.NewGuid().ToString();
-            textBox1.Text = version;
-
-            applicationId = listBox1.GetItemText(listBox1.SelectedItem);
-
-            if (String.IsNullOrWhiteSpace(applicationId))
+            try
             {
-                logger.LogInfo("No Workspace Defined!");
-                return;
+                string scriptPath = "";
+                Stopwatch stopwatch = new Stopwatch();
+                stopwatch.Start();
+
+                version = Guid.NewGuid().ToString();
+                textBox1.Text = version;
+
+                applicationId = listBox1.GetItemText(listBox1.SelectedItem);
+
+                if (String.IsNullOrWhiteSpace(applicationId))
+                {
+                    logger.LogInfo("No Workspace Defined!");
+                    return;
+                }
+
+                if (String.IsNullOrWhiteSpace(textBox3.Text))
+                {
+                    scriptPath = applicationParams.TempPath + "InsertData.sql";
+                    textBox3.Text = scriptPath;
+                }
+                else
+                {
+                    scriptPath = textBox3.Text + @"\InsertData.sql";
+                }
+
+                for (int i = 0; i < this.libraryList.Count(); i++)
+                {
+                    if (!listBox2.SelectedItems.Contains(libraryList[i].LibraryName)) continue;
+                    if (this.LibraryList[i].LocalFullPath.EndsWith(".pbd")) continue;
+                    var fullPath = this.LibraryList[i].LocalFullPath.Replace("/", @"\");
+
+                    Commander.Exec(applicationParams.TargetPath, "bversion.exe", "PUT_IDE " + fullPath + " " + version, ref message);
+
+                    pbdFiles += libraryList[i].LibraryNameWithExtension + ",";
+                    logger.LogInfo("Implant Library " + this.LibraryList[i].LocalFullPath + " " + message);
+                }
+                if (pbdFiles.EndsWith(",")) pbdFiles = pbdFiles.Substring(0, pbdFiles.Length - 1);
+
+                buildTask.InsertBuildData(BuildMode.SpecificPbds, scriptPath, version, LibraryList, versionParams,applicationId,ref pbdFiles);
+
+                stopwatch.Stop();
+                logger.LogInfo("Time elapsed: " + stopwatch.Elapsed);
+
+                MessageBox.Show("Implant Version Finished");
             }
-
-            if (String.IsNullOrWhiteSpace(textBox3.Text)) 
+            catch (Exception ex)
             {
-                scriptPath = applicationParams.TempPath + "InsertData.sql";
-                textBox3.Text = scriptPath;
-            }
-            else
-            {
-                scriptPath = textBox3.Text + @"\InsertData.sql";
+                
+                 logger.LogInfo(ex.Message + Misc.GetLineNumber(ex));
             }
             
-            for (int i = 0; i < this.libraryList.Count(); i++)
-            {
-                if (!listBox2.SelectedItems.Contains(libraryList[i].LibraryName)) continue;
-                if (this.LibraryList[i].LocalFullPath.EndsWith(".pbd")) continue;
-                var fullPath = this.LibraryList[i].LocalFullPath.Replace("/", @"\");
-
-                Commander.Exec(applicationParams.TargetPath, "bversion.exe", "PUT_IDE " + fullPath + " " + version, ref message);
-
-                pbdFiles += libraryList[i].LibraryNameWithExtension + ",";
-                logger.LogInfo("Implant Library " + this.LibraryList[i].LocalFullPath + " " + message);
-            }
-            if (pbdFiles.EndsWith(",")) pbdFiles = pbdFiles.Substring(0, pbdFiles.Length - 1);
-
-            buildTask.InsertBuildData(BuildMode.SpecificPbds, scriptPath, version, ref pbdFiles);
-
-            stopwatch.Stop();
-            logger.LogInfo("Time elapsed: " + stopwatch.Elapsed);
-
-            MessageBox.Show("Implant Version Finished");
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -142,14 +155,11 @@ namespace Loctapus
 
         }
 
-        public List<PBLibrary> LibraryList { get { return this.libraryList; } set { } }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             applicationId = listBox1.GetItemText(listBox1.SelectedItem);
             this.LoadWorkspace(applicationId);
-            //libraryList = workspace.LibraryList(applicationId, workspaceParams.LibraryTargetPath);
-            workspace.GetPBTFile(workspaceParams.LocalPBTPath, workspaceParams.LibraryTargetPath);
             libraryList = workspace.GetLocalLibrarylist(applicationId, workspaceParams.LocalPBTPath, workspaceParams.LibraryTargetPath);
             libraryList = (
             from o in libraryList
@@ -159,22 +169,36 @@ namespace Loctapus
 
             libraryList.RemoveAll(x=> x.LibraryNameWithExtension.EndsWith(".pbd"));
             listBox2.DataSource = libraryList.Select(x => x.LibraryName).ToList();
+            textBox4.Text = String.Empty;
+
         }
 
-        private void LoadWorkspace(string applicationId)
+        public void LoadWorkspace(string applicationId)
         {
-            applicationParams = dataManager.GetApplicationParams();
-            workspace = new SourceSafeProvider(dataManager, applicationId);
-            workspaceParams = dataManager.GetWorkspaceParams(applicationId);
-            buildParameters = new BuildTaskParameters(applicationId);
-            buildTask = new BuildTask(buildParameters, dataManager, workspace);
-            buildParameters.LoadConfiguration("WorkspaceProfile.config", applicationId, workspaceParams.ConfigurationMode, workspaceParams.DBConnectionString);
+            path = AppDomain.CurrentDomain.BaseDirectory;
+            if (Directory.Exists(path))
+            {
+                Environment.CurrentDirectory = path;
+                applicationParams = dataManager.GetApplicationParams(path);
+                workspaceParams = dataManager.GetWorkspaceParamsPerPath(applicationId, path);
+                versionParams = dataManager.GetVersionParams(applicationId, path);
+            }
+            else
+            {
+                applicationParams = dataManager.GetApplicationParams();
+                workspaceParams = dataManager.GetWorkspaceParams(applicationId);
+                versionParams = dataManager.GetVersionParams(applicationId);
+            }
+            workspace = new SourceSafeProvider(dataManager, applicationId, "LOCAL");
+            buildTask = new BuildTask();
             if (!Directory.Exists(applicationParams.TempPath)) Directory.CreateDirectory(applicationParams.TempPath);
+            textBox3.Text = applicationParams.TempPath;
         }
 
         public ApplicationParams ApplicationParams { get { return applicationParams; } set { } }
         public WorkspaceParams WorkspaceParams { get { return workspaceParams; } set { } }
-        public BuildTaskParameters BuildTaskParameters { get { return buildParameters; } set { } }
+        public VersionParams VersionParams { get { return versionParams; } set { } }
+        public List<PBLibrary> LibraryList { get { return this.libraryList; } set { } }
 
         private void checkBoxAll_CheckedChanged(object sender, EventArgs e)
         {

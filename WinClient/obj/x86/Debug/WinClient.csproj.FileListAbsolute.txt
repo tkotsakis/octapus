@@ -17,6 +17,13 @@ D:\Visual Studio 2010\Projects\Relational.Octapus\WinClient\bin\Debug\NLog.confi
 D:\Visual Studio 2010\Projects\Relational.Octapus\WinClient\bin\Debug\NLog.dll
 D:\Visual Studio 2010\Projects\Relational.Octapus\WinClient\bin\Debug\NLog.xml
 D:\Visual Studio 2010\Projects\Relational.Octapus\WinClient\obj\x86\Debug\Relational.Octapus.WinClient_Content.g.cs
+C:\projects\Relational.Octapus\WinClient\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\projects\Relational.Octapus\WinClient\obj\x86\Debug\App.baml
+C:\projects\Relational.Octapus\WinClient\obj\x86\Debug\MainWindow.g.cs
+C:\projects\Relational.Octapus\WinClient\obj\x86\Debug\App.g.cs
+C:\projects\Relational.Octapus\WinClient\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+C:\projects\Relational.Octapus\WinClient\obj\x86\Debug\Relational.Octapus.WinClient_MarkupCompile.cache
+C:\projects\Relational.Octapus\WinClient\obj\x86\Debug\Relational.Octapus.WinClient_MarkupCompile.lref
 C:\projects\Relational.Octapus\WinClient\bin\Debug\ApplicationParams.xml
 C:\projects\Relational.Octapus\WinClient\bin\Debug\VersionInfo.xml
 C:\projects\Relational.Octapus\WinClient\bin\Debug\WorkspaceProfile.config
@@ -42,13 +49,6 @@ C:\projects\Relational.Octapus\WinClient\bin\Debug\Relational.Octapus.Persistenc
 C:\projects\Relational.Octapus\WinClient\bin\Debug\Workspace.SourceSafe.pdb
 C:\projects\Relational.Octapus\WinClient\bin\Debug\Workspace.pdb
 C:\projects\Relational.Octapus\WinClient\bin\Debug\NLog.xml
-C:\projects\Relational.Octapus\WinClient\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\projects\Relational.Octapus\WinClient\obj\x86\Debug\App.baml
-C:\projects\Relational.Octapus\WinClient\obj\x86\Debug\MainWindow.g.cs
-C:\projects\Relational.Octapus\WinClient\obj\x86\Debug\App.g.cs
-C:\projects\Relational.Octapus\WinClient\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
-C:\projects\Relational.Octapus\WinClient\obj\x86\Debug\Relational.Octapus.WinClient_MarkupCompile.cache
-C:\projects\Relational.Octapus\WinClient\obj\x86\Debug\Relational.Octapus.WinClient_MarkupCompile.lref
 C:\projects\Relational.Octapus\WinClient\obj\x86\Debug\MainWindow.baml
 C:\projects\Relational.Octapus\WinClient\obj\x86\Debug\Relational.Octapus.WinClient.g.resources
 C:\projects\Relational.Octapus\WinClient\obj\x86\Debug\Relational.Octapus.WinClient.Properties.Resources.resources

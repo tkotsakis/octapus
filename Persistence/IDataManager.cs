@@ -10,8 +10,11 @@ namespace Relational.Octapus.Persistence
         int GetNextBuildNo(string applicationId);
         void SetNextBuildNo(string applicationId);
         ApplicationParams GetApplicationParams();
+        ApplicationParams GetApplicationParams(string path);
         WorkspaceParams GetWorkspaceParams(string applicationId);
+        WorkspaceParams GetWorkspaceParamsPerPath(string applicationId,string path);
         VersionParams GetVersionParams (string applicationId);
+        VersionParams GetVersionParams(string applicationId,string path);
         WorkspaceParams GetRetrofitParamsFrom (string applicationIdFrom);
         WorkspaceParams GetRetrofitParamsTo (string applicationIdTo);
         List<string> GetAvailableWorkspaces();

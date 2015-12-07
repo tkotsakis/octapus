@@ -41,6 +41,11 @@ namespace Relational.Octapus.BuildEngine
             logger.LogInfo(String.Concat("BuildEngine Task Initialized for application:", this.buildTaskParameters.ApplicationId));
         }
 
+        public BuildTask()
+        {
+
+        }
+
         public BuildTaskParameters BuildTaskParameters
         {
             get { return buildTaskParameters; }
@@ -513,6 +518,60 @@ namespace Relational.Octapus.BuildEngine
                                    buildDate + singleQuote + comma + active + par + changeLine).ToString();
 
                         if ((this.LibraryList[i].IsApplicationLibrary) && this.LibraryList[i].LibraryNameWithExtension.ToUpper().EndsWith(".PBL"))
+                            File.AppendAllText(path, content);
+                    }
+                }
+                File.AppendAllText(path, end);
+            }
+            catch (Exception ex)
+            {
+
+                logger.LogInfo("InsertBuildData: " + ex.Message + "LineNumber: " + Misc.GetLineNumber(ex));
+            }
+
+        }
+
+        public void InsertBuildData(BuildMode buildMode, string path, string buildNumber, List<PBLibrary> libraryList, 
+                                    VersionParams versionParams,string applicationId, ref string pbdFiles)
+        {
+            try
+            {
+                string delete = "DELETE FROM pbbuild WHERE lib_name = '", ifExists = "IF EXISTS (SELECT 1 FROM sysobjects WHERE name = 'pbbuild' AND type = 'U')";
+                string statement = "INSERT INTO dbo.pbbuild (application_id, lib_name, build_number,build_seqno, build_date, active)", values = "VALUES (", changeLine = "\r\n";
+                string singleQuote = "'", comma = ",", par = ")", content = "", begin = "BEGIN", end = "END", libraryName;
+                int active = 1;
+                buildNumber = String.IsNullOrWhiteSpace(buildNumber) ? versionParams.BuildNumber : buildNumber;
+                var buildSeqNo = versionParams.BuildSeqNo;
+                var buildDate = DateTime.Parse(versionParams.BuildDate).ToString("yyyyMMdd HH:mm:ss");
+                var pbdList = pbdFiles.Split(',').ToList();
+                File.WriteAllText(path, "");
+                File.WriteAllText(path, ifExists + changeLine + begin + changeLine);
+                if (buildMode == BuildMode.Full)
+                {
+                    for (int i = 0; i < libraryList.Count(); i++)
+                    {
+                        content = (delete + libraryList[i].LibraryName + singleQuote + changeLine +
+                                   statement + changeLine + values + singleQuote + applicationId + singleQuote + comma +
+                                   singleQuote + libraryList[i].LibraryName + singleQuote + comma + singleQuote + buildNumber + singleQuote +
+                                   comma + singleQuote + buildSeqNo + singleQuote + comma + singleQuote + buildDate + singleQuote + comma +
+                                   active + par + changeLine).ToString();
+
+                        if ((libraryList[i].IsApplicationLibrary) && libraryList[i].LibraryNameWithExtension.ToUpper().EndsWith(".PBL"))
+                            File.AppendAllText(path, content);
+                    }
+                }
+                else
+                {
+                    for (int i = 0; i < pbdList.Count(); i++)
+                    {
+                        if (!pbdList[i].ToUpper().EndsWith(".PBD")) libraryName = pbdList[i].Split('.').FirstOrDefault();
+                        content = (delete + pbdList[i] + singleQuote + changeLine +
+                                   statement + changeLine + values + singleQuote + applicationId + singleQuote + comma +
+                                   singleQuote + pbdList[i] + singleQuote + comma + singleQuote + buildNumber + singleQuote + comma +
+                                   singleQuote + buildSeqNo + singleQuote + comma + singleQuote +
+                                   buildDate + singleQuote + comma + active + par + changeLine).ToString();
+
+                        if ((libraryList[i].IsApplicationLibrary) && libraryList[i].LibraryNameWithExtension.ToUpper().EndsWith(".PBL"))
                             File.AppendAllText(path, content);
                     }
                 }

@@ -74,7 +74,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>mV5+M5NN4XJSzndE+rN/qY+598o=</dsig:DigestValue>
+        <dsig:DigestValue>jkoa52OmtI+bUyM+wbaysvE07pU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -91,26 +91,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Relational.Octapus.BuildEngine.dll" size="32768">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Relational.Octapus.BuildEngine.dll" size="33792">
       <assemblyIdentity name="Relational.Octapus.BuildEngine" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>Xi3/qquysGLot5DECLgZPjS5YGc=</dsig:DigestValue>
+        <dsig:DigestValue>hlA8xbqyFg1FUfF2GGUW2AWss8E=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Relational.Octapus.Common.dll" size="12800">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Relational.Octapus.Common.dll" size="13312">
       <assemblyIdentity name="Relational.Octapus.Common" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>Gwi9kGE83M8UlKcplFRMkFT1M8E=</dsig:DigestValue>
+        <dsig:DigestValue>RuhfKZcnbo6szXdqCVd/tf6NV8I=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -122,19 +122,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>4/jh4+TlM7aI6ETy3xOFdfOqG10=</dsig:DigestValue>
+        <dsig:DigestValue>SR1ntqgq35KUbcLUVpSUEYQukHQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Relational.Octapus.Persistence.ExternalFiles.dll" size="14336">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Relational.Octapus.Persistence.ExternalFiles.dll" size="15872">
       <assemblyIdentity name="Relational.Octapus.Persistence.ExternalFiles" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>eVSL7rYvmXmPQKJF4fD7kaEcm4c=</dsig:DigestValue>
+        <dsig:DigestValue>Il/JFsXktnKi+1ReGeC8ymbaz+Y=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -158,19 +158,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>FdiyPWJ9dFUiFcY6c3d134WkYIk=</dsig:DigestValue>
+        <dsig:DigestValue>WVdGca4DdtHjFYZjh7ki1dxLmKk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Workspace.SourceSafe.dll" size="29184">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Workspace.SourceSafe.dll" size="29696">
       <assemblyIdentity name="Workspace.SourceSafe" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>4aD0w116xNbYM6gfuvKkzqp7nyI=</dsig:DigestValue>
+        <dsig:DigestValue>j28deP7c1d3C2mZKuYY1JLMP3Ng=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -91,7 +91,7 @@ namespace Relational.Octapus.Persistence.ExternalFiles
 
             XmlDocument doc = new XmlDocument();
             doc.Load(AppDomain.CurrentDomain.BaseDirectory +"/ApplicationParams.xml");
-
+            
             appParams.InitilizationFilePath = doc.SelectSingleNode("applicationParameters/InitializationFile").InnerText;
             appParams.Username              = doc.SelectSingleNode("applicationParameters/Username").InnerText;
             appParams.Password              = doc.SelectSingleNode("applicationParameters/Password").InnerText;
@@ -112,6 +112,36 @@ namespace Relational.Octapus.Persistence.ExternalFiles
             appParams.RootPath              = doc.SelectSingleNode("applicationParameters/RootPath").InnerText;
             appParams.VssContent            = doc.SelectSingleNode("applicationParameters/VssContent").InnerText;
             
+            return appParams;
+        }
+
+        public ApplicationParams GetApplicationParams(string path)
+        {
+            ApplicationParams appParams = new ApplicationParams();
+
+            XmlDocument doc = new XmlDocument();
+            doc.Load(path  + "/ApplicationParams.xml");
+
+            appParams.InitilizationFilePath = doc.SelectSingleNode("applicationParameters/InitializationFile").InnerText;
+            appParams.Username = doc.SelectSingleNode("applicationParameters/Username").InnerText;
+            appParams.Password = doc.SelectSingleNode("applicationParameters/Password").InnerText;
+            appParams.PbgFormat = doc.SelectSingleNode("applicationParameters/PbgFormat").InnerText;
+            appParams.PbgBeginLib = doc.SelectSingleNode("applicationParameters/PbgBeginLib").InnerText;
+            appParams.PbgBeginObj = doc.SelectSingleNode("applicationParameters/PbgBeginObj").InnerText;
+            appParams.PbgEnd = doc.SelectSingleNode("applicationParameters/PbgEnd").InnerText;
+            appParams.PbgExtension = doc.SelectSingleNode("applicationParameters/PbgExtension").InnerText;
+            appParams.NewLineSeparator = doc.SelectSingleNode("applicationParameters/NewLineSeparator").InnerText;
+            appParams.NewPbgFileSuffix = doc.SelectSingleNode("applicationParameters/NewPbgFileSuffix").InnerText;
+            appParams.Quote = doc.SelectSingleNode("applicationParameters/Quote").InnerText;
+            appParams.Space = doc.SelectSingleNode("applicationParameters/Space").InnerText;
+            appParams.QuestionMark = doc.SelectSingleNode("applicationParameters/QuestionMark").InnerText;
+            appParams.DiskSpaceNeededInMb = doc.SelectSingleNode("applicationParameters/DiskSpaceNeededInMb").InnerText;
+            appParams.TargetPath = doc.SelectSingleNode("applicationParameters/TargetPath").InnerText;
+            appParams.TempPath = doc.SelectSingleNode("applicationParameters/TempPath").InnerText;
+            appParams.LogPath = doc.SelectSingleNode("applicationParameters/LogPath").InnerText;
+            appParams.RootPath = doc.SelectSingleNode("applicationParameters/RootPath").InnerText;
+            appParams.VssContent = doc.SelectSingleNode("applicationParameters/VssContent").InnerText;
+
             return appParams;
         }
 
@@ -147,6 +177,38 @@ namespace Relational.Octapus.Persistence.ExternalFiles
             return workspaceParams;
         }
 
+        public WorkspaceParams GetWorkspaceParamsPerPath(string applicationId,string path)
+        {
+            WorkspaceParams workspaceParams = new WorkspaceParams();
+            XmlDocument doc = new XmlDocument();
+            doc.Load(path + "/WorkspaceProfile.config");
+            ConfigOperator configOperator = new ConfigOperator("WorkspaceProfile.config", applicationId);
+
+            workspaceParams.VssPBTPath = configOperator.GetParameterValue("VSS", "vssPBTPath");
+            workspaceParams.VssProjectPath = configOperator.GetParameterValue("VSS", "vssProjectPath");
+            workspaceParams.LibraryTargetPath = configOperator.GetParameterValue("PBORCA", "librariesTargetFile");
+            workspaceParams.VssProductPath = configOperator.GetParameterValue("VSS", "vssProductPath");
+            workspaceParams.VssCommonPath = configOperator.GetParameterValue("VSS", "vssCommonPath");
+            workspaceParams.AppServerTargetFile1 = configOperator.GetParameterValue("PBORCA", "AppServerTargetFile1");
+            workspaceParams.AppServerTargetFile2 = configOperator.GetParameterValue("PBORCA", "AppServerTargetFile2");
+            workspaceParams.AppServerTargetPath1 = configOperator.GetParameterValue("VSS", "vssAppServerPBTPath1");
+            workspaceParams.AppServerTargetPath2 = configOperator.GetParameterValue("VSS", "vssAppServerPBTPath2");
+            workspaceParams.LocalVssWorkingPath = configOperator.GetParameterValue("VSS", "localVssWorkingPath");
+            workspaceParams.LocalVssProductPath = configOperator.GetParameterValue("VSS", "localVssProductPath");
+            workspaceParams.LocalVssCommonPath = configOperator.GetParameterValue("VSS", "localVssCommonPath");
+            workspaceParams.LocalPBTPath = configOperator.GetParameterValue("VSS", "localPBTPath");
+            workspaceParams.ClientNecFilesPath = configOperator.GetParameterValue("VSS", "clientNecFilesPath");
+            workspaceParams.Pbw = configOperator.GetParameterValue("PBORCA", "Pbw");
+            workspaceParams.ApplicationId = applicationId;
+            workspaceParams.EasLibNeeded = configOperator.GetParameterValue("VSS", "EasLibNeeded");
+            workspaceParams.DBConnectionString = doc.SelectSingleNode("workspace/DBConnection/" + applicationId).InnerText;
+            var configurationMode = doc.SelectSingleNode("workspace/ConfigurationMode/" + applicationId).InnerText;
+            ConfigurationMode configMode = (ConfigurationMode)Enum.Parse(typeof(ConfigurationMode), configurationMode);
+            workspaceParams.ConfigurationMode = configMode;
+
+            return workspaceParams;
+        }
+
         public VersionParams GetVersionParams(string applicationId)
         {
             VersionParams versionParams = new VersionParams();
@@ -161,6 +223,24 @@ namespace Relational.Octapus.Persistence.ExternalFiles
             versionParams.ClientHostName = Dns.GetHostName();
             versionParams.Domain      = System.Net.NetworkInformation.IPGlobalProperties.GetIPGlobalProperties().DomainName;
             versionParams.ExtraInfo   = doc.SelectSingleNode("versionInfo/" + applicationId + "/ExtraInfo").InnerText;
+
+            return versionParams;
+        }
+
+        public VersionParams GetVersionParams(string applicationId,string path)
+        {
+            VersionParams versionParams = new VersionParams();
+            XmlDocument doc = new XmlDocument();
+            doc.Load(path + "/VersionInfo.xml");
+
+            versionParams.BuildNumber = Guid.NewGuid().ToString();
+            versionParams.BuildSeqNo = doc.SelectSingleNode("versionInfo/" + applicationId + "/BuildSeqNo").InnerText;
+            versionParams.BuildDate = String.Format("{0:dd/MM/yyyy HH:mm:ss}", DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss"));
+            versionParams.Username = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
+            versionParams.Computer = System.Environment.MachineName;
+            versionParams.ClientHostName = Dns.GetHostName();
+            versionParams.Domain = System.Net.NetworkInformation.IPGlobalProperties.GetIPGlobalProperties().DomainName;
+            versionParams.ExtraInfo = doc.SelectSingleNode("versionInfo/" + applicationId + "/ExtraInfo").InnerText;
 
             return versionParams;
         }

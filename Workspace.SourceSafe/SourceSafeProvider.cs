@@ -22,7 +22,7 @@ namespace Relational.Octapus.Workspace.SourceSafe
         private SourceSafeControl sourceSafeControl;
         private OctapusLog logger;
         private StringDiff stringDiff;
-        string pbgFromSourceControl, correctPbg;
+        string pbgFromSourceControl, correctPbg,path;
         private List<PBLibrary> clientLibraryList;
         private List<PBLibrary> libraryList;
         private List<PBLibrary> appServerLibraryList;
@@ -48,6 +48,31 @@ namespace Relational.Octapus.Workspace.SourceSafe
             this.libraryList = GetLibrarylist(applicationId, workspaceParams.VssPBTPath, workspaceParams.LibraryTargetPath);
             this.libraryList = GetLibrarylist(applicationId, workspaceParams.AppServerTargetPath1, workspaceParams.AppServerTargetFile1);
             sourceSafeControl.SetWorkingFolder(workspaceParams.VssProjectPath, workspaceParams.LocalVssWorkingPath);
+        }
+
+        public SourceSafeProvider(IDataManager dataManager, string applicationId, string mode,IHookOctapusLogger hookLogger = null)
+        {
+            this.dataManager = dataManager;
+            path = AppDomain.CurrentDomain.BaseDirectory ;
+            if (Directory.Exists(path))
+            {
+                if (!path.Contains("Octapus")) path = path + @"\Octapus";
+                Environment.CurrentDirectory = path;
+                applicationParams = dataManager.GetApplicationParams(path);
+                workspaceParams = dataManager.GetWorkspaceParamsPerPath(applicationId, path);
+                versionParams = dataManager.GetVersionParams(applicationId, path);
+            }
+            else
+            {
+                applicationParams = dataManager.GetApplicationParams();
+                workspaceParams = dataManager.GetWorkspaceParams(applicationId);
+                versionParams = dataManager.GetVersionParams(applicationId);
+            }
+            this.logger = new OctapusLog("OctapusLogger", hookLogger);
+            this.libraryList = new List<PBLibrary>();
+            this.appServerLibraryList = new List<PBLibrary>();
+            this.clientLibraryList = new List<PBLibrary>();
+            this.libraryList = GetLocalLibrarylist(applicationId, workspaceParams.LocalPBTPath, workspaceParams.LibraryTargetPath);
         }
 
         public IDataManager DataManager { get; set; }
@@ -376,6 +401,7 @@ namespace Relational.Octapus.Workspace.SourceSafe
 
             try
             {
+                //File.SetAttributes(targetPath + "/" + targetFile,FileAttributes.Normal);
                 var targetContent = File.ReadAllText(targetPath + "/" + targetFile);
                 pbtLiblist = Regex.Split(targetContent, @"LibList|liblist").Last().Split(new string[] { @";\r\ntype" }, StringSplitOptions.RemoveEmptyEntries).First();
                 string[] pathLevelPattern = { "..\\" };
